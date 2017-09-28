@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ax-root',
+  selector: 'app-root',
   template: `
-    <p>
-      app Works!
-    </p>
+    <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ax';
 }
