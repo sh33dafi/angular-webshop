@@ -1,0 +1,44 @@
+@import "../../../styles/colors";
+
+$sidebar-width: 80px;
+$badge-width: 25px;
+
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .sidebar {
+    width: $sidebar-width;
+    height: 100%;
+    border-right: 1px solid $border-color;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .shopping-cart {
+      height: $sidebar-width;
+      border: none;
+      background-color: $accent-color;
+      color: $text-color;
+      outline: none;
+      text-align: center;
+      line-height: $sidebar-width;
+      cursor: pointer;
+
+      &__badge {
+        background-color: $accent-color-dark;
+        position: relative;
+        top: -$sidebar-width;
+        left: $sidebar-width - $badge-width;
+        width: $badge-width;
+        height: $badge-width;
+        line-height: $badge-width;
+        font-size: .8em;
+      }
+    }
+  }
+
+  .container {
+    flex-grow: 1;
+  }
+}

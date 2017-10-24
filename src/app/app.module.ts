@@ -13,7 +13,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({test: testReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 25 //  Retains last 25 states
     })
@@ -22,4 +22,8 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
   bootstrap: [AppComponent]
 })
 export class AppModule {
+}
+
+function testReducer(state, action) {
+  return state;
 }
